@@ -37,7 +37,6 @@
 
   .gallery figure {
     height: 100%;
-    display: none;
     position: relative;
   }
 
@@ -45,10 +44,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .gallery figure.active {
-    display: block;
   }
 
   .gallery figcaption {
@@ -89,12 +84,12 @@
 
   #thumbnails img:hover {
     filter: grayscale(0);
-    border: 3px solid greenyellow;
+    border: 5px solid greenyellow;
   }
 
   #thumbnails img.active {
     filter: grayscale(0);
-    border: 3px solid white;
+    border: 5px solid red;
   }
 
   /* Buttons */

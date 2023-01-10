@@ -15,6 +15,7 @@ Bonus:
 */
 
 const app = Vue.createApp({
+    name: 'Carousel',
     data(){
         return {
             currentIndex: 0,
