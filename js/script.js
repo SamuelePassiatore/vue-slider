@@ -17,7 +17,8 @@ Bonus:
 const app = Vue.createApp({
     data(){
         return {
-
+            currentIndex: 0,
+            pictures: source
         }
     }
 });
