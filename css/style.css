@@ -84,12 +84,12 @@
 
   #thumbnails img:hover {
     filter: grayscale(0);
-    border: 5px solid greenyellow;
+    border: 3px solid blue;
   }
 
   #thumbnails img.active {
     filter: grayscale(0);
-    border: 5px solid red;
+    border: 3px solid red;
   }
 
   /* Buttons */

@@ -21,6 +21,25 @@ const app = Vue.createApp({
             currentIndex: 0,
             pictures: source
         }
+    },
+    methods: {
+        changeImage(target) {
+            if(target === 'next'){
+                // Incremento l'indice
+                this.currentIndex++;
+                // Controllo per ripartire dall'inizio
+                if(this.currentIndex === source.length){
+                this.currentIndex = 0;
+                }
+            } else {
+                // Decremento l'indice
+                this.currentIndex--;
+                // Controllo per ripartire dalla fine
+                if(this.currentIndex < 0){
+                    this.currentIndex = source.length - 1;
+                }
+            }
+        }  
     }
 });
 
