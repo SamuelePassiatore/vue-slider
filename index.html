@@ -32,7 +32,7 @@
                 </figure>
             </div>
             <div id="thumbnails">
-                <img v-for= "(picture, i) in pictures" :src="picture.image" :alt="picture.title" :class="{'active': i === currentIndex}">
+                <img v-for= "(picture, i) in pictures" :src="picture.image" :alt="picture.title" :class="{'active': i === currentIndex}" @click="changeImage(i)">
             </div>
 
             <!-- Arrows -->

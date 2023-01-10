@@ -31,13 +31,16 @@ const app = Vue.createApp({
                 if(this.currentIndex === source.length){
                 this.currentIndex = 0;
                 }
-            } else {
+            } else if (target === 'prev') {
                 // Decremento l'indice
                 this.currentIndex--;
                 // Controllo per ripartire dalla fine
                 if(this.currentIndex < 0){
                     this.currentIndex = source.length - 1;
                 }
+            } else {
+                // Metto il current index sul thumb corrente
+                this.currentIndex = target;
             }
         }  
     }
