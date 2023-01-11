@@ -40,6 +40,10 @@
     position: relative;
   }
 
+  .gallery figure:hover {
+    cursor: grab;
+  }
+
   .gallery img{
     width: 100%;
     height: 100%;

@@ -23,7 +23,7 @@
     <div class="container" id="root">
         <div id="carousel">
             <div class="gallery">
-                <figure v-for= "(picture, i) in pictures" v-show="i === currentIndex">
+                <figure v-for= "(picture, i) in pictures" v-show="i === currentIndex" @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
                     <img :src="picture.image" :alt="picture.title">
                     <figcaption>
                       <h2>{{ picture.title}}</h2>

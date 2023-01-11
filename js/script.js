@@ -19,7 +19,8 @@ const app = Vue.createApp({
     data(){
         return {
             currentIndex: 0,
-            pictures: source
+            pictures: source,
+            autoplay: null
         }
     },
     methods: {
@@ -42,7 +43,26 @@ const app = Vue.createApp({
                 // Metto il current index sul thumb corrente
                 this.currentIndex = target;
             }
-        }  
+        },
+
+        startAutoplay(){
+            this.autoplay = setInterval(()=>{
+                // Incremento l'indice
+                this.currentIndex++;
+                // Controllo per ripartire dall'inizio
+                if(this.currentIndex === source.length){
+                this.currentIndex = 0;
+                }
+            }, 3000);
+        },
+
+        stopAutoplay(){
+            clearInterval(this.autoplay);
+        }
+    },
+    
+    mounted(){
+        this.startAutoplay();
     }
 });
 
